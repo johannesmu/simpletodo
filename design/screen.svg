@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 360 640" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <style id="bx-google-fonts">@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,500,700,900,100italic,300italic,400,400italic,500italic,700italic,900italic);</style>
+  </defs>
+  <rect width="360" height="640" style="fill: rgb(245, 237, 209);"/>
+  <rect x="0.472" y="1.982" width="359.381" height="43.79" style="fill: rgb(230, 237, 210);"/>
+  <g transform="matrix(0.082628, 0, 0, 0.076675, 547.510437, -99.694374)">
+    <g transform="matrix(0.706378, 0, 0, 0.761221, -2725.994141, 1399.025757)">
+      <ellipse style="fill: rgb(249, 242, 179); stroke-width: 0;" cx="249.427" cy="251.145" rx="248.959" ry="248.959"/>
+      <path d="M 123.247 242.799 C 123.247 242.799 193.07 328.647 193.07 327.502 C 193.07 326.357 376.212 145.505 376.212 145.505 L 407.117 182.134 L 193.07 365.275 L 100.354 264.547 L 123.247 242.799 Z" style="stroke: black; fill: rgb(85, 218, 100); stroke-width: 0;" bx:origin="0.5 0.5"/>
+    </g>
+  </g>
+  <text x="15.572" y="28.407" style="font-size: 16px; font-family: Roboto; word-spacing: 0px;">Done it</text>
+  <g>
+    <rect x="-0.283" y="46.376" width="360.136" height="47.866" style="fill: rgb(255, 255, 255);"/>
+    <text x="15.937" y="75.177" style="font-size: 16px; font-family: Roboto; word-spacing: 0px;">Get milk</text>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, 0, 50)">
+    <rect x="-0.283" y="46.376" width="360.136" height="47.866" style="fill: rgb(255, 255, 255);"/>
+    <text x="15.937" y="75.177" style="font-size: 16px; font-family: Roboto; word-spacing: 0px;">Cat Food</text>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, 0, 101)">
+    <rect x="-0.283" y="45.376" width="360.136" height="47.866" style="fill: rgb(255, 255, 255);"/>
+    <text x="15.937" y="75.177" style="font-size: 16px; font-family: Roboto; word-spacing: 0px; text-decoration: line-through; fill: rgb(183, 179, 179);">Bananas</text>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, -299.843597, -2.157148)">
+    <ellipse style="fill: rgb(251, 249, 249); stroke-width: 0;" transform="matrix(1.000001, 0, 0, 1, -318.519767, 111.001099)" cx="648.765" cy="498.841" rx="24.268" ry="24.268"/>
+    <text x="319.858" y="623.616" style="font-size: 38.5px; font-family: Roboto; word-spacing: 0px;">+</text>
+  </g>
+</svg>
