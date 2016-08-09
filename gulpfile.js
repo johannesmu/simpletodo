@@ -69,6 +69,6 @@ gulp.task('icon-xhdpi',function(){
 });
 gulp.task('logo',function(){
   gulp.src('icons/icon.png')
-  .pipe(imageresize({width:64,height:64,crop:false,upscale:false}))
+  .pipe(imageresize({width:128,height:128,crop:false,upscale:false}))
   .pipe(gulp.dest('build/www/images'));
 });

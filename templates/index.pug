@@ -1,17 +1,19 @@
 doctype html
 html
   head
-    meta(name='viewport',value='width=device-width,initial-scale=1')
+    meta(name='viewport',value='width=device-width,height=device-height,initial-scale=1')
     title="doneit"
     link(rel='stylesheet',href='css/styles.css')
   body
     .app-view
       header.header
-        img(src='images/icon.png')
+        img(src='images/icon.png',class='logo')
       main
-        ul(class='task-list')
+        ul.task-list
       footer.footer
-        .input-box
-          input.text-box
+        form(id='input')
+          .input-box
+            input.text-box(type='text' placeholder='next task')
+    script(src='cordova.js')
     script(src='js/jquery-3.1.0.min.js')
     script(src='main.js')
