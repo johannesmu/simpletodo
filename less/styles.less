@@ -8,43 +8,79 @@ html,body{
 }
 body{
   .no-space;
+  font-size: @main-text-size;
 }
 .app-view{
   .relative;
   .full-w;
+  .full-h;
 }
 header{
   .absolute;
   .top;
+  .full-w;
+  .row;
+  .hcenter;
+  .box;
+  align-items: center;
   background-color: @header-bg;
   min-height: @header-height;
-  padding:5px;
-  z-index: 999;
+  padding:@header-padding;
+  z-index: @header-z-index;
   .logo{
-    max-width: 72px;
+    max-width: 52px;
   }
 }
 main{
-  // .full-h;
+  background-color:lighten(@header-bg,2%);
 }
 .task-list{
   .no-space;
 }
 .footer{
   .absolute;
-  z-index: 999;
+  z-index: @header-z-index;
   .bottom;
   .full-w;
   height: @header-height;
-  border-top:1px #ccc solid;
   background-color:@header-bg;
 }
-.input-box{
+#input{
+  .no-space;
+  .row;
   .full-h;
 }
+
+.input-bg{
+  background:lighten(@header-bg, 10%);
+  flex:2 0 0;
+  .full-h;
+}
+.button-bg{
+  background:lighten(@header-bg, 10%);
+  .add-button{
+    width:48px;
+    height:48px;
+    border-radius: 50%;
+    border:0;
+    color:lighten(@header-bg, 10%);
+    background:red;
+    font-size: @main-text-size*2;
+    .row;
+    .vcenter;
+    .hcenter;
+  }
+}
 .text-box{
-  background:transparent;
   .full-w;
-  .block;
-  font-size:@main-text-size;
+  .box;
+  border:0;
+  min-height: 100%;
+  background-color:transparent;
+  display: block;
+  padding:5px;
+  font-size: @main-text-size*1.5;
+}
+.text-box:focus{
+  outline:0;
 }
