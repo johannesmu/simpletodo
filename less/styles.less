@@ -1,0 +1,50 @@
+@import (reference) "variables.less";
+@import (reference) "functions.less";
+html,body{
+  .full-h;
+}
+.app-view{
+  .full-h;
+}
+body{
+  .no-space;
+}
+.app-view{
+  .relative;
+  .full-w;
+}
+header{
+  .absolute;
+  .top;
+  background-color: @header-bg;
+  min-height: @header-height;
+  padding:5px;
+  z-index: 999;
+  .logo{
+    max-width: 72px;
+  }
+}
+main{
+  // .full-h;
+}
+.task-list{
+  .no-space;
+}
+.footer{
+  .absolute;
+  z-index: 999;
+  .bottom;
+  .full-w;
+  height: @header-height;
+  border-top:1px #ccc solid;
+  background-color:@header-bg;
+}
+.input-box{
+  .full-h;
+}
+.text-box{
+  background:transparent;
+  .full-w;
+  .block;
+  font-size:@main-text-size;
+}

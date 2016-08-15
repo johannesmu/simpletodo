@@ -1,0 +1,31 @@
+{
+  "name": "doneit",
+  "version": "0.0.1",
+  "description": "\"simple to do list\"",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://95.85.48.111"
+  },
+  "keywords": [
+    "todo",
+    "list"
+  ],
+  "author": "johannes muljana",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-image-resize": "^0.10.0",
+    "gulp-less": "^3.1.0",
+    "gulp-pug": "^3.0.3",
+    "gulp-pug-beautify": "0.0.1",
+    "gulp-watch": "^4.3.9",
+    "less-plugin-autoprefix": "^1.5.1",
+    "less-plugin-clean-css": "^1.5.1",
+    "run-sequence": "^1.2.2"
+  }
+}
