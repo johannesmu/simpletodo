@@ -1,0 +1,35 @@
+{
+  "name": "todolist",
+  "version": "0.0.1",
+  "description": "\"simple to do list\"",
+  "main": "index.html",
+  "private": true,
+  "scripts": {
+    "test": "cordova run android"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johannesmu/simpletodo.git"
+  },
+  "keywords": [
+    "todo",
+    "simple",
+    "android"
+  ],
+  "author": "johannes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johannesmu/simpletodo/issues"
+  },
+  "homepage": "https://github.com/johannesmu/simpletodo",
+  "devDependencies": {
+    "gulp-pug": "^3.0.3",
+    "gulp-less": "^3.1.0",
+    "gulp-watch": "^4.3.8",
+    "gulp-pug-beautify": "0.0.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp": "^3.9.1",
+    "glob": "^7.0.5",
+    "gulp-image": "^2.2.0"
+  }
+}
