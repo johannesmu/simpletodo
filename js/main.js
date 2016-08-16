@@ -10,6 +10,7 @@ function onLoad(){
       $(".text-box").val("");
     });
     readTasks(TasksList);
+    taskAction();
   });
 }
 
@@ -31,6 +32,12 @@ function onPause(){
 //when app resumes
 function onResume(){
   readTasks(TasksList);
+}
+function taskAction(){
+  $('.task-list').on('touchend',function(evt){
+    console.log(evt.target);
+    $(evt.target).toggleClass("done");
+  });
 }
 function createTask(data){
 	var task = new Object();
@@ -68,7 +75,7 @@ function renderTasks(elm,arr){
     id=TasksList[i].id;
     console.log(id);
     name=TasksList[i].name;
-    task='<li data-id="'+id+'">'+name+'</li>';
+    task='<li class="task" data-id="'+id+'">'+name+'</li>';
     $(".task-list").append(task);
   }
 }

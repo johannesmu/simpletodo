@@ -44,15 +44,21 @@ main{
 .task-list{
   .no-space;
   overflow-y: auto;
-  li{
-    font-size:@main-text-size*1.5;
-    color:#666666;
-    background-color: lighten(@header-bg,25%);
-    padding:10px 5px;
-    margin-bottom: 2px;
-    box-shadow: 1px 1px 2px darken(@header-bg,10%);
-  }
+
 }
+.task{
+  font-size:@main-text-size*1.5;
+  color:#666666;
+  background-color: lighten(@header-bg,25%);
+  padding:10px 5px;
+  margin-bottom: 2px;
+  box-shadow: 1px 1px 2px darken(@header-bg,10%);
+}
+.done{
+  color:#999999;
+  background-color: darken(@header-bg,10%);
+}
+
 .footer{
   .absolute;
   z-index: @header-z-index;
