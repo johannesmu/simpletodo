@@ -9,6 +9,7 @@ function onLoad(){
       createTask($(".text-box").val());
       $(".text-box").val("");
     });
+    readTasks(TasksList);
   });
 }
 
@@ -32,8 +33,10 @@ function onResume(){
   readTasks(TasksList);
 }
 function createTask(data){
-  // create task as a javascript object with status:0 = not done
-  var task = {name:data,id:getTaskID(),status:0};
+	var task = new Object();
+	task.id = getTaskID();
+	task.name = data;
+	task.status = 0;
   //push to TasksList array
   TasksList.push(task);
   saveTasks(TasksList);
@@ -45,31 +48,50 @@ function getTaskID(){
 }
 function saveTasks(list){
   var data = JSON.stringify(list);
-  accessStorage("set",data);
+  accessStorage("set","tasks",data);
 }
 
 function readTasks(arr){
-  arr = JSON.parse(accessStorage("get",""));
-  renderTasks("task-list",TasksList);
+  if(itemsExists()){
+    TasksList = JSON.parse(accessStorage("get","tasks",""));
+    console.log(TasksList);
+    renderTasks("task-list",TasksList);
+  }
 }
-
 function renderTasks(elm,arr){
-  count = arr.length;
-  console.log(count);
+  count = TasksList.length;
+  //empty task list
+  elm = '.'+elm;
+  $(".task-list").empty();
   for(i=0;i<count;i++){
-    item = arr[i];
-    id=item.id;
-    name=item.name;
+    // item = TasksList[i];
+    id=TasksList[i].id;
+    console.log(id);
+    name=TasksList[i].name;
     task='<li data-id="'+id+'">'+name+'</li>';
-    $('.task-list').append(task);
+    $(".task-list").append(task);
   }
 }
-function accessStorage(mode,data){
+function accessStorage(mode,key,data){
   if(mode=="set"){
-    localStorage.setItem("tasks",data);
+    localStorage.setItem(key,data);
+    //check if item exists
+    if(localStorage.getItem(key)){
+      return "success";
+    }
   }
-  if(mode=="get"){
-    tasks = localStorage.getItem("tasks");
-    return tasks;
+  if(mode=="get" && itemsExists()){
+    tasks = localStorage.getItem(key);
+    if(tasks){
+      return tasks;
+    }
+  }
+}
+function itemsExists(){
+  if(localStorage.length>0){
+    return true;
+  }
+  else{
+    return false;
   }
 }
