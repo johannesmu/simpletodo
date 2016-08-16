@@ -38,7 +38,7 @@ gulp.task('browserSync', function() {
   })
 });
 gulp.task('watch',function(){
-  runsequence('less','html','copyjs','browserSync',function(e){
+  runsequence('less','html','icons','copyjs','browserSync',function(e){
   });
   gulp.watch('templates/*.pug',['html']);
   gulp.watch('less/*.less',['less']);

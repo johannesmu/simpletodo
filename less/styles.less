@@ -28,7 +28,7 @@ header{
   padding:@header-padding;
   z-index: @header-z-index;
   .logo{
-    max-width: 52px;
+    max-width:@header-height*0.9;
   }
 }
 main{
@@ -58,9 +58,13 @@ main{
 }
 .button-bg{
   background:lighten(@header-bg, 10%);
+  padding:@header-height*0.1;
+  .row;
+  .vcenter;
+  .hcenter;
   .add-button{
-    width:48px;
-    height:48px;
+    width:@header-height*0.9;
+    height:@header-height*0.9;
     border-radius: 50%;
     border:0;
     color:lighten(@header-bg, 10%);

@@ -47,15 +47,19 @@ function saveTasks(list){
   accessStorage("set",data);
 }
 
-function readTasks(){
-  TasksList = JSON.parse(accessStorage("get",""));
+function readTasks(arr){
+  arr = JSON.parse(accessStorage("get",""));
+  renderTasks("task-list",TasksList);
 }
 
-function renderTasks(elm){
-  count = TasksList.length;
+function renderTasks(elm,arr){
+  count = arr.length;
   for(i=0;i<count;i++){
-    item = TasksList[i];
-    
+    item = arr[i];
+    id=item.id;
+    name=item.name;
+    task='<li data-id="'+id+'">'+name+'</li>';
+    $('.'+elm).append(task);
   }
 }
 function accessStorage(mode,data){
