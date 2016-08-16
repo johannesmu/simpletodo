@@ -29,7 +29,7 @@ function onPause(){
 
 //when app resumes
 function onResume(){
-  readTasks();
+  readTasks(TasksList);
 }
 function createTask(data){
   // create task as a javascript object with status:0 = not done
@@ -37,6 +37,7 @@ function createTask(data){
   //push to TasksList array
   TasksList.push(task);
   saveTasks(TasksList);
+  renderTasks("task-list",TasksList);
 }
 function getTaskID(){
   //create timestamp and return it
@@ -54,12 +55,13 @@ function readTasks(arr){
 
 function renderTasks(elm,arr){
   count = arr.length;
+  console.log(count);
   for(i=0;i<count;i++){
     item = arr[i];
     id=item.id;
     name=item.name;
     task='<li data-id="'+id+'">'+name+'</li>';
-    $('.'+elm).append(task);
+    $('.task-list').append(task);
   }
 }
 function accessStorage(mode,data){
